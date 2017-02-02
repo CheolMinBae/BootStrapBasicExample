@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap DropDown</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- 메뉴를 아래쪽이아니라 윗쪽으로 올려서 보여주고 싶으면 class를 dropup으로 주면 됨 -->
+    <div class="dropdown">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            도서 목록 <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li class="divider"></li>
+            <li><a href="#">3</a></li>
+        </ul>
+    </div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-default">공지사항</button>
+        <!-- 버튼그룹사이에 btn-group으로 드롭다운을 묶어도 반영됨 -->
+        <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                도서 목록 <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li class="divider"></li>
+                <li><a href="#">3</a></li>
+            </ul>
+        </div>
+        <button type="button" class="btn btn-default">
+            게시판
+        </button>
+    </div>
+    <br>
+    <div class="btn-group-vertical">
+        <button type="button" class="btn btn-default">공지사항</button>
+        <!-- 버튼그룹사이에 btn-group-vertical으로 드롭다운을 묶어도 반영됨 -->
+        <div class="btn-group-vertical">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                도서 목록 <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li class="divider"></li>
+                <li><a href="#">3</a></li>
+            </ul>
+        </div>
+        <button type="button" class="btn btn-default">
+            게시판
+        </button>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

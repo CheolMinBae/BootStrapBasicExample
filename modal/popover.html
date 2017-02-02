@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Popover</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <!--
+    팝오버? 클릭시 말풍선으로 표시되는 내용
+    버튼내에 모든 속성을 정의하면 됨
+    data-original-title: 팝오버 타이틀
+    data-content: 팝오버에 표시할 내용
+    data-placement: 팝오버의 방향 -->
+    <button id="edu" class="btn btn-primary btn-lg" data-original-title="이지스 에듀" data-toggle="popover" data-content="ㅃㅃㅃㅃㅃㅃㅃㅃ", data-placement="right">바빠 학습법 시리즈</button>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        //아래내용 유지해야 popover됨
+        $('#edu').popover();
+    </script>
+</body>
+</html>

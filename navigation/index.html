@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<head>
+    <meta charset="UTF-8">
+    <title>BootStrap DropDown</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        .stacked {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. 탭형태의 navbar -->
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#">공지사항</a></li>
+        <li><a href="#">도서목록</a></li>
+        <li><a href="#">게시판</a></li>
+    </ul>
+    <!-- 2. 가로로 나열식의 navbar -->
+    <ul class="nav nav-pills">
+        <li class="active"><a href="#">공지사항</a></li>
+        <li><a href="#">도서목록</a></li>
+        <li><a href="#">게시판</a></li>
+    </ul>
+    <!-- 3. 2번의 세로버전 -->
+    <div class="stacked">
+        <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="#">공지사항</a></li>
+            <li><a href="#">도서 목록</a></li>
+            <li><a href="#">게시판</a></li>
+        </ul>
+    </div>
+    <!-- 4. 일반적인 navbar 구현 -->
+    <!-- navbar-fixed-top, navbar-fixed-bottom을 사용하면 상단/하단에 고정됨 -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="bavbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://www.easyspub.com" class="navbar-brand easysLogo">이지스퍼블리싱</a>
+        </div>
+        <!-- navbar-toggle에 있는 data-target에 있는 class가 반드시 포함되어야함 여기서는 navbar-ex-1-collapse -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#">공지사항</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        도서 목록 <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">게시판</a></li>
+                <li><a href="#">자료실</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">로그인</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $('.nav-tabs li').on('click', function(e) {
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+        });
+
+        $('.nav-pills li').on('click', function(e) {
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+        });
+    </script>
+</body>
+</html>
